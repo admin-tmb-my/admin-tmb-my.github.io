@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+  <title>The Midnight Baker</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./stylesheets/stylesheet.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Inconsolata"
+  />
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("./images/TMBMain.jpg");
+      min-height: 75%;
+    }
+
+    .menu {
+      display: none;
+    }
+  </style>
+  <body>
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+          <a href="home.htm" class="w3-button w3-block w3-black">HOME</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="news.htm" class="w3-button w3-block w3-black">NEWS</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="menu.htm" class="w3-button w3-block w3-black">MENU</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="where.htm" class="w3-button w3-block w3-black">WHERE</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+      <div
+        class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small"
+      >
+        <span class="w3-tag">Open from 8am to 5pm</span>
+      </div>
+      <div class="w3-display-middle w3-center">
+        <span class="w3-text-white" style="font-size: 90px"
+          >The<br />Midnight<br />Baker</span
+        >
+      </div>
+      <div
+        class="w3-display-bottomright w3-center w3-padding-large w3-hide-small"
+      >
+        <span class="w3-tag"
+          >Seni Mont Kiara, Mont Kiara, 50480 Kuala Lumpur</span
+        >
+      </div>
+    </header>
+
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-light-grey w3-large" style="padding-bottom: 50px">
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width: 700px">
+          <h5 class="w3-center w3-padding-48">
+            <span class="w3-tag w3-wide">OUR MENU</span>
+          </h5>
+
+          <!-- Menu Tabs -->
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Breakfast');"
+              id="tabBreakfast1"
+            >
+              <div class="w3-col s6 tablink">All Day Breakfast</div>
+            </a>
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Besides');"
+              id="tabBesides1"
+            >
+              <div class="w3-col s6 tablink">Besides Breakfast</div>
+            </a>
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Drinks');"
+              id="tabDrinks1"
+            >
+              <div class="w3-col s6 tablink">Beverages</div>
+            </a>
+          </div>
+
+          <!-- Menu Breakfast -->
+          <div id="Breakfast" class="w3-container menu w3-padding-48 w3-card">
+            <div style="margin: auto; border: 3px solid rgb(189, 70, 70)">
+              <h4 class="redtext" style="text-align: center">
+                EGG-CENTRIC BREKKIES
+              </h4>
+              <p class="w3-text-grey" style="text-align: center">
+                starring free range eggs
+              </p>
+            </div>
+
+            <h5>BIG BREAKFAST</h5>
+            <p class="w3-text-grey">
+              two eggs sunny side up or scrambled with your choice of 2 meats
+              (beef bacon, chicken sausage or turkey ham) served with homemade
+              baked beans, rocket salad, coleslaw and two slices of toasted
+              wholemeal bread
+              <span class="redtext">
+                <br />RM 28 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+            </p>
+            <br />
+
+            <h5>EGGS BENEDICT</h5>
+            <p class="w3-text-grey">
+              two perfectly poached eggs topped with tangy hollandaise sauce,
+              balanced on an english muffin along with rocket salad and your
+              choice of smoked salmon or turkey ham
+              <span class="redtext">
+                <br />RM 28 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+            </p>
+            <br />
+
+            <h5>STONEAGE BREKKIE</h5>
+            <p class="w3-text-grey">
+              one egg poached served with sauteed mushrooms and mashed avocados,
+              rocket salad and two slices of nut & seed bread
+              <span class="redtext"> <br />RM 28 </span>
+            </p>
+            <br />
+
+            <h5>SIMPLETON</h5>
+            <p class="w3-text-grey">
+              two eggs sunny side up or scrambled, homemade baked beans and two
+              slices of toasted wholemeal bread
+              <span class="redtext">
+                <br />RM 16 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+            </p>
+            <br />
+
+            <h5>BAKED EGGS (4 WAYS)</h5>
+            <p class="w3-text-grey">
+              spanish style baked eggs and a slice of garlic bread
+              <span class="redtext"><br />RM 20</span>
+              <br />spanish style baked eggs with smoked salmon and a slice of
+              garlic bread
+              <span class="redtext"><br />RM 26</span>
+              <br />spanish style baked eggs with beef bacon and a slice of
+              garlic bread
+              <span class="redtext"><br />RM 26</span>
+              <br />spanish style baked eggs with sausage and mushrooms served
+              with a slice of garlic bread
+              <span class="redtext">
+                <br />RM 28 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+            </p>
+            <br />
+
+            <h5>FLUFFY STUFFED OMELETTE</h5>
+            <p class="w3-text-grey">
+              mushroom, spinach, avocado and mozzarella omelette with rocket
+              salad and one toast
+              <span class="redtext"><br />RM 28</span>
+              <br />smoked salmon, avocado and spinach omelette with rocket
+              salad and one toast
+              <span class="redtext"><br />RM 28</span>
+              <br />beef bacon, mushrooms and mozzarella omelette with rocket
+              salad and one toast
+              <span class="redtext"><br />RM 28</span>
+            </p>
+            <br />
+
+            <h5>SMOKED SALMON & EGGS</h5>
+            <p class="w3-text-grey">
+              two poached eggs served with smoked salmon, sauteed mushroom,
+              cherry tomatoes and rocket salad
+              <span class="redtext"> <br />RM 30 </span>
+            </p>
+            <br />
+
+            <h5>PLAIN OMELETTE</h5>
+            <p class="w3-text-grey">
+              two-egg omelette and two slices of toasted wholemeal bread
+              <span class="redtext">
+                <br />RM 16 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+            </p>
+            <br />
+
+            <div style="margin: auto; border: 3px solid rgb(189, 70, 70)">
+              <h4 class="redtext" style="text-align: center">
+                BREAD-CENTRIC BREKKIES
+              </h4>
+              <p class="w3-text-grey" style="text-align: center">
+                featuring homemade breads
+              </p>
+            </div>
+
+            <h5>OPEN TOASTIES</h5>
+            <p class="w3-text-grey">
+              two eggs on slice of toasted wholemeal bread with mashed avocado,
+              topped with your choice of beef bacon, smoked salmon, tuna, turkey
+              ham or sauteed mushrooms served with rocket salad
+              <span class="redtext">
+                <br />RM 25 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+            </p>
+            <br />
+
+            <h5>SANDWICHES</h5>
+            <p class="w3-text-grey">
+              tuna or turkey ham on wholemeal bread served with coleslaw
+              <span class="redtext">
+                <br />RM 18 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+              <br /><br />vegetarian pesto (v) or grilled chicken on wholemeal
+              bread served with coleslaw
+              <span class="redtext">
+                <br />RM 20 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+              <br /><br />norwegian smoked salmon or pesto chicken on wholemeal
+              bread served with coleslaw
+              <span class="redtext">
+                <br />RM 26 <br />+ RM 4 for GF Bread <br />+ RM 6 for LC Nut &
+                Seed Bread
+              </span>
+            </p>
+            <br />
+
+            <h5>SOUP OR SALAD INSTEAD</h5>
+            <p class="w3-text-grey">
+              homemade mushroom soup with a slice of garlic bread (v)
+              <span class="redtext"> <br />RM 13 </span>
+              <br />a bed of rocket salad with cherry tomatoes,sauteed
+              mushrooms, avocado and homemade pesto dressing tossed in olive oil
+              (v)
+              <span class="redtext">
+                <br />RM 20 <br />+ RM 8 to add grilled chicken
+              </span>
+            </p>
+            <br />
+
+            <div style="margin: auto; border: 3px solid rgb(189, 70, 70)">
+              <h4 class="redtext" style="text-align: center">
+                SWEET BEGINNINGS
+              </h4>
+              <p class="w3-text-grey" style="text-align: center">
+                wakeup calls of sweetness
+              </p>
+            </div>
+
+            <h5>BAKED BRIOCHE FRENCH TOAST (4 WAYS)</h5>
+            <p class="w3-text-grey">
+              original homemade baked brioche french toast served with butter
+              and honey sauce
+              <span class="redtext">
+                <br />RM 16 <br />+ RM 4 for GF Bread
+              </span>
+              <br /><br />homemade baked brioche french toast topped with
+              sauteed apple and cinnamon
+              <span class="redtext">
+                <br />RM 18 <br />+ RM 4 for GF Bread
+              </span>
+              <br /><br />homemade baked brioche french toast topped with
+              caramelized bananas
+              <span class="redtext">
+                <br />RM 18 <br />+ RM 4 for GF Bread
+              </span>
+              <br /><br />homemade baked brioche french toast topped with
+              blueberry or strawberry compote
+              <span class="redtext">
+                <br />RM 18 <br />+ RM 4 for GF Bread
+              </span>
+            </p>
+            <br />
+
+            <h5>FLUFFY PANCAKES</h5>
+            <p class="w3-text-grey">
+              a stack of fluffy pancakes served with maple syrup & fresh cream
+              (v)
+              <span class="redtext">
+                <br />RM 16 <br />+ RM 4 for GF pancakes
+              </span>
+              <br /><br />a stack of fluffy pancakes served with blueberry /
+              strawberry compote or caramelized bananas and fresh cream (v)
+              <span class="redtext">
+                <br />RM 18 <br />+ RM 4 for GF pancakes
+              </span>
+            </p>
+            <br />
+
+            <h5>CAKE BREKKIE</h5>
+            <p class="w3-text-grey">
+              choose from our daily selection of freshly baked loaf cakes:
+              pandan topped with hawaiian coconut flakes, gula melaka banana,
+              tangy lemon, moist carrot, spiced apple, toasty coconut (v)
+              <span class="redtext"> <br />RM 9 per slice </span>
+              <br />for the carb-averse, we offer a selection of low carb loaf
+              cakes (gluten free, grain free and sugar free) on certain days or
+              upon special order: keto pandan, moist banana chocolate, tangy
+              lemon or special edition flavors (v)
+              <span class="redtext"> <br />RM 13 per slice </span>
+            </p>
+            <br />
+          </div>
+
+          <!-- Menu Besides Breakfast -->
+          <div id="Besides" class="w3-container menu w3-padding-48 w3-card">
+            <div style="margin: auto; border: 3px solid rgb(189, 70, 70)">
+              <h4 class="redtext" style="text-align: center">PASTA OR RAMEN</h4>
+              <p class="w3-text-grey" style="text-align: center">
+                noodle lovers unite!
+              </p>
+            </div>
+
+            <h5>CREAMY SMOKED SALMON PASTA</h5>
+            <p class="w3-text-grey">
+              creamy linguini with smoked salmon, cherry tomatoes and chilli
+              flakes
+              <span class="redtext"> <br />RM 28 </span>
+            </p>
+            <br />
+
+            <h5>CREAMY TURKEY HAM PASTA</h5>
+            <p class="w3-text-grey">
+              creamy linguini with turkey ham, cherry tomatoes and chilli flakes
+              <span class="redtext"> <br />RM 26 </span>
+            </p>
+            <br />
+
+            <h5>CREAMY BEEF BACON PASTA</h5>
+            <p class="w3-text-grey">
+              creamy linguini with crispy beef bacon topped with an egg sunny
+              side up
+              <span class="redtext"> <br />RM 28 </span>
+            </p>
+            <br />
+
+            <h5>HOMEMADE PESTO PASTA</h5>
+            <p class="w3-text-grey">
+              spaghetti with sauteed baby tomatoes and pesto made from scratch
+              (v)
+              <span class="redtext"> <br />RM 26 </span>
+            </p>
+            <br />
+
+            <h5>CHEESY OVENBAKED BEEF BOLOGNESE PASTA</h5>
+            <p class="w3-text-grey">
+              cheesy oven baked linguini in australian beef bolognese sauce
+              <span class="redtext"> <br />RM 28 </span>
+            </p>
+            <br />
+
+            <h5>SPICY AGLIO OLIO</h5>
+            <p class="w3-text-grey">
+              spicy aglio olio spaghetti with roasted garlic and turkey ham (v)
+              option available
+              <span class="redtext"> <br />RM 26 </span>
+            </p>
+            <br />
+
+            <h5>PAN SEARED SALMON</h5>
+            <p class="w3-text-grey">
+              pan seared salmon with aglio olio spaghetti or steamed brown rice
+              <span class="redtext"> <br />RM 30 </span>
+            </p>
+            <br />
+
+            <h5>STEAMY KIMCHI RAMEN</h5>
+            <p class="w3-text-grey">
+              the perfect hangover remedy, a steamy bowl of ramen cooked with
+              homemade kimchi, turkey ham, veggies and an egg
+              <span class="redtext"> <br />RM 25 </span>
+            </p>
+            <br />
+
+            <div style="margin: auto; border: 3px solid rgb(189, 70, 70)">
+              <h4 class="redtext" style="text-align: center">
+                RICE, RICE, RICE
+              </h4>
+              <p class="w3-text-grey" style="text-align: center">
+                i can rice all day
+              </p>
+            </div>
+
+            <h5>PESTO FRIED RICE</h5>
+            <p class="w3-text-grey">
+              homemade pesto fried brown rice with mushroom topped with a fried
+              egg (v) option available
+              <span class="redtext"> <br />RM 25 </span>
+            </p>
+            <br />
+
+            <h5>KIMCHI FRIED RICE</h5>
+            <p class="w3-text-grey">
+              homemade kimchi fried brown rice with sausage and turkey ham,
+              topped with a fried egg (v) option available
+              <span class="redtext"> <br />RM 25 </span>
+            </p>
+            <br />
+
+            <h5>POKE BOWLS</h5>
+            <p class="w3-text-grey">
+              homemade kimchi, smoked salmon or chicken pokebowls with brown
+              rice, homemade kimchi, tofu, chia seeds, zucchini, shredded purple
+              cabbage and carrots topped with a special sauce (v) option
+              available
+              <span class="redtext"> <br />RM 25 </span>
+            </p>
+            <br />
+
+            <div style="margin: auto; border: 3px solid rgb(189, 70, 70)">
+              <h4 class="redtext" style="text-align: center">ANYTIME SIDES</h4>
+            </div>
+
+            <p class="w3-text-grey">
+              SWEET POTATO FRIES
+              <span class="redtext"> <br />RM 14 </span>
+              <br />JUST FRIES
+              <span class="redtext"> <br />RM 12 </span>
+              <br />HASH BROWNS
+              <span class="redtext"> <br />RM 12 </span>
+              <br />8 NUGGETS
+              <span class="redtext"> <br />RM 14 </span>
+            </p>
+            <br />
+
+            <div style="margin: auto; border: 3px solid rgb(189, 70, 70)">
+              <h4 class="redtext" style="text-align: center">
+                CAKES & PASTRIES
+              </h4>
+              <p class="w3-text-grey" style="text-align: center">
+                food for the soul
+              </p>
+            </div>
+
+            <h5>LOAF CAKE BY THE SLICE</h5>
+            <p class="w3-text-grey">
+              possible selections include: gula melaka banana, tangy lemon,
+              toasty coconut with pineapple
+              <span class="redtext"> <br />RM 9 </span>
+              <br />spiced apple walnut, super moist carrot cake, wild berries
+              with white chocolate
+              <span class="redtext"> <br />RM 14 </span>
+              <span class="redtext">
+                <br />Pre-order of whole loaves available
+              </span>
+            </p>
+            <br />
+
+            <h5>LOAF CAKE BY THE SLICE FOR THE CARB-AVERSE</h5>
+            <p class="w3-text-grey">
+              whenever possible, we will have grain free, gluten free and sugar
+              free options of our pandan, lemon or chocolate banana loaf cakes
+              available for our carb-averse diners
+              <span class="redtext"> <br />RM 13 </span>
+              <span class="redtext">
+                <br />Pre-order of whole loaves available
+              </span>
+            </p>
+            <br />
+
+            <h5>BEST SELLER BROWNIE</h5>
+            <p class="w3-text-grey">
+              moist and super chocolatey brownie by the slice
+              <span class="redtext"> <br />RM 8 </span>
+              <br />gluten free but taste almost exactly like the super
+              chocolatey brownie by the slice with white chocolate
+              <span class="redtext"> <br />RM 9 </span>
+            </p>
+            <br />
+
+            <h5>SAVORY SLICES</h5>
+            <p class="w3-text-grey">
+              quiche lorraine featuring turkey ham
+              <span class="redtext"> <br />RM 14 </span>
+              <br />spinach quiche (v)
+              <span class="redtext"> <br />RM 14 </span>
+            </p>
+            <br />
+
+            <h5>OTHER BAKED GOODS</h5>
+            <p class="w3-text-grey">
+              cinnamon roll
+              <span class="redtext"> <br />RM 7 </span>
+              <br />ham and cheese roll
+              <span class="redtext"> <br />RM 8 </span>
+              <br />english muffin with fresh cream / butter and fruit compote
+              <span class="redtext"> <br />RM 9 </span>
+              <br />buttermilk scones with fresh cream / butter and fruit
+              compote
+              <span class="redtext"> <br />RM 9 </span>
+              <br />chocolate croissant
+              <span class="redtext"> <br />RM 7 </span>
+              <br />plain croissant
+              <span class="redtext"> <br />RM 6 </span>
+              <br />giant cookie
+              <span class="redtext"> <br />RM 7 </span>
+            </p>
+            <br />
+          </div>
+
+          <!-- Menu Beverages -->
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <div style="margin: auto; border: 3px solid rgb(189, 70, 70)">
+              <h4 class="redtext" style="text-align: center">Beverages</h4>
+              <p class="w3-text-grey" style="text-align: center">
+                quenchers and pickmeuppers
+              </p>
+            </div>
+
+            <h5>HOT COFFEE</h5>
+            <p class="w3-text-grey">
+              espresso
+              <span class="redtext"> <br />RM 7 </span>
+              <br />americano
+              <span class="redtext"> <br />RM 9 </span>
+              <br />latte
+              <span class="redtext"> <br />RM 11 </span>
+              <br />flat white
+              <span class="redtext"> <br />RM 11 </span>
+              <br />cappucino
+              <span class="redtext"> <br />RM 11 </span>
+              <br />mocha
+              <span class="redtext"> <br />RM 14 </span>
+              <br />piccolo
+              <span class="redtext"> <br />RM 10 </span>
+              <br />babycino
+              <span class="redtext">
+                <br />RM 7 <br />+3 for soy or almond milk
+              </span>
+            </p>
+            <br />
+
+            <h5>ICED COFFEE</h5>
+            <p class="w3-text-grey">
+              americano
+              <span class="redtext"> <br />RM 11 </span>
+              <br />latte/ green tea latte
+              <span class="redtext"> <br />RM 15 </span>
+              <br />mocha/ chocolate
+              <span class="redtext"> <br />RM 17 </span>
+            </p>
+            <br />
+
+            <h5>FIZZY/NONE</h5>
+            <p class="w3-text-grey">
+              bundaberg or perrier
+              <span class="redtext"> <br />RM 12 </span>
+              <br />soda
+              <span class="redtext"> <br />RM 6 </span>
+              <br />perrier sparkling water
+              <span class="redtext"> <br />RM 12 </span>
+              <br />pororo / bottled milo
+              <span class="redtext"> <br />RM 8 </span>
+              <br />mineral water
+              <span class="redtext"> <br />RM 3 </span>
+            </p>
+            <br />
+
+            <h5>TEAS & OTHERS</h5>
+            <p class="w3-text-grey">
+              tea selection: earl grey lavender, pearl of the orient, british
+              breakfast, nymph of nile, chammomile and rooibos
+              <span class="redtext"> <br />RM 12 </span>
+              <br />green tea latte
+              <span class="redtext"> <br />RM 11 </span>
+              <br />ginger tea with lemon grass, goji berries & gula melaka or
+              with lemon & mint
+              <span class="redtext"> <br />RM 13 </span>
+              <br />iced lemon tea (with honey & mint leaves)
+              <span class="redtext"> <br />RM 13 </span>
+              <br />hot chocolate
+              <span class="redtext"> <br />RM 15 </span>
+            </p>
+            <br />
+
+            <h5>JUICES & SMOOTHIES*</h5>
+            <span class="redtext"> *no sugar & no water added </span>
+            <p class="w3-text-grey">
+              green juice (apple, spinach, celery, cucumber)
+              <span class="redtext"> <br />RM 16 </span>
+              <br />gold juice (carrot, apple)
+              <span class="redtext"> <br />RM 16 </span>
+              <br />orange juice (oranges)
+              <span class="redtext"> <br />RM 16 </span>
+              <br />red juice (beetroot, apple, watermelon)
+              <span class="redtext"> <br />RM 16 </span>
+              <br />yellow juice (lemon, orange)
+              <span class="redtext"> <br />RM 16 </span>
+              <br />smoothies (choose from avocado, banana, blueberry,
+              strawberry or Oreo)
+              <span class="redtext"> <br />RM 16 </span>
+            </p>
+            <br />
+          </div>
+
+          <!-- Menu Tabs -->
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Breakfast');"
+              id="tabBreakfast2"
+            >
+              <div class="w3-col s6 tablink">All Day Breakfast</div>
+            </a>
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Besides');"
+              id="tabBesides2"
+            >
+              <div class="w3-col s6 tablink">Besides Breakfast</div>
+            </a>
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Drinks');"
+              id="tabDrinks2"
+            >
+              <div class="w3-col s6 tablink">Beverages</div>
+            </a>
+          </div>
+
+          <img
+            src="./images/TMBCoffee.jpg"
+            style="width: 100%; max-width: 800px; margin-top: 32px"
+          />
+
+          <p class="w3-text-grey">
+            (v) vegetarian
+            <br />GF gluten free <br />LC low carb
+          </p>
+        </div>
+      </div>
+
+      <!-- End page content -->
+    </div>
+    <script>
+      // Tabbed Menu
+      function openMenu(evt, menuName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " w3-dark-grey",
+            ""
+          );
+        }
+        document.getElementById(menuName).style.display = "block";
+        tabName1 = "tab" + menuName + "1";
+        tabName2 = "tab" + menuName + "2";
+        document.getElementById(tabName1).firstElementChild.className +=
+          " w3-dark-grey";
+        document.getElementById(tabName2).firstElementChild.className +=
+          " w3-dark-grey";
+      }
+      document.getElementById("tabBreakfast1").click();
+    </script>
+  </body>
+</html>
