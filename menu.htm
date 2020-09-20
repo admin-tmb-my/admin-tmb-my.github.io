@@ -72,7 +72,7 @@
       <div class="w3-container" id="menu">
         <div class="w3-content" style="max-width: 700px">
           <h5 class="w3-center w3-padding-48">
-            <span class="w3-tag w3-wide">OUR MENU</span>
+            <span class="w3-tag w3-wide">OUR MENUS</span>
           </h5>
 
           <!-- Menu Tabs -->
@@ -82,21 +82,27 @@
               onclick="openMenu(event, 'Breakfast');"
               id="tabBreakfast1"
             >
-              <div class="w3-col s6 tablink">All Day Breakfast</div>
+              <div class="w3-col s6 tablink" style="width: 100%">
+                All Day Breakfast Menu
+              </div>
             </a>
             <a
               href="javascript:void(0)"
               onclick="openMenu(event, 'Besides');"
               id="tabBesides1"
             >
-              <div class="w3-col s6 tablink">Besides Breakfast</div>
+              <div class="w3-col s6 tablink" style="width: 100%">
+                Besides Breakfast Menu
+              </div>
             </a>
             <a
               href="javascript:void(0)"
               onclick="openMenu(event, 'Drinks');"
               id="tabDrinks1"
             >
-              <div class="w3-col s6 tablink">Beverages</div>
+              <div class="w3-col s6 tablink" style="width: 100%">
+                Beverages Menu
+              </div>
             </a>
           </div>
 
@@ -624,21 +630,27 @@
               onclick="openMenu(event, 'Breakfast');"
               id="tabBreakfast2"
             >
-              <div class="w3-col s6 tablink">All Day Breakfast</div>
+              <div class="w3-col s6 tablink" style="width: 100%">
+                All Day Breakfast Menu
+              </div>
             </a>
             <a
               href="javascript:void(0)"
               onclick="openMenu(event, 'Besides');"
               id="tabBesides2"
             >
-              <div class="w3-col s6 tablink">Besides Breakfast</div>
+              <div class="w3-col s6 tablink" style="width: 100%">
+                Besides Breakfast Menu
+              </div>
             </a>
             <a
               href="javascript:void(0)"
               onclick="openMenu(event, 'Drinks');"
               id="tabDrinks2"
             >
-              <div class="w3-col s6 tablink">Beverages</div>
+              <div class="w3-col s6 tablink" style="width: 100%">
+                Beverages Menu
+              </div>
             </a>
           </div>
 
@@ -667,17 +679,17 @@
         tablinks = document.getElementsByClassName("tablink");
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(
-            " w3-dark-grey",
-            ""
+            " redbackground",
+            " "
           );
         }
         document.getElementById(menuName).style.display = "block";
         tabName1 = "tab" + menuName + "1";
         tabName2 = "tab" + menuName + "2";
         document.getElementById(tabName1).firstElementChild.className +=
-          " w3-dark-grey";
+          " redbackground";
         document.getElementById(tabName2).firstElementChild.className +=
-          " w3-dark-grey";
+          " redbackground";
       }
       document.getElementById("tabBreakfast1").click();
     </script>

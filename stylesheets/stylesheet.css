@@ -1599,10 +1599,24 @@ a {
   border-color: #e7ffff !important;
 }
 
+.tablink {
+  background-color: darkgray;
+  color: white;
+  border-radius: 12px;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+
 .tablink:hover {
-  background-color: #9e9e9e;
+  background-color: rgb(190, 105, 105);
 }
 
 .redtext {
   color: rgb(189, 70, 70);
+}
+
+.redbackground {
+  background-color: rgb(189, 70, 70) !important;
 }
